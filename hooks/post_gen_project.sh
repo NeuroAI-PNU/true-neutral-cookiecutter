@@ -1,4 +1,9 @@
-help = """
+#!/bin/bash
+set -e
+
+git init
+
+cat << 'EOF'
 Your project has been created!
 _____________________________________________________________________________
                             ___________ _
@@ -15,14 +20,16 @@ _____________________________________________________________________________
  (   .-'   )-._-:  /        \(/\'-._ `.     @|@@@@@              ..|........
   (   )  _//_/|:  /          `\()   `\_\     |/_@@               )'-._.-._.-
    ( (   \()^_/)_/             )/      \\    /                  /   /
-    )  _.-\\.\(_)__._.-'-.-'-.//_.-'-.-.)\-'/._                /       
-.-.-.-'   _o\ \\\     '::'   (o_ '-.-' |__\'-.-;~ ~ ~ ~ ~ ~ ~~/   /\   
+    )  _.-\\.\(_)__._.-'-.-'-.//_.-'-.-.)\-'/._                /
+.-.-.-'   _o\ \\\     '::'   (o_ '-.-' |__\'-.-;~ ~ ~ ~ ~ ~ ~~/   /\
           \ /  \\\__          )_\    .:::::::.-'\            '- - -|
-     :::''':::::^)__\:::::::::::::::::'''''''-.  \                  '- - - - 
+     :::''':::::^)__\:::::::::::::::::'''''''-.  \                  '- - - -
     :::::::  '''''''''''   ''''''''''''':::. -'\  \       C. SWANSIGER
 _____':::::_____________________________________\__\_________________________
 
-If you have not done so already, install your new project with:
+Git repository initialized.
+
+Install your new project with:
 
 cd {{cookiecutter.repo_name}}
 uv sync
@@ -30,6 +37,5 @@ uv sync
 You will need to manually add data to .gitignore to prevent it from syncing to
 version control.
 
-Don't forget to sync to GitHub. Have fun!
-"""
-print(help)
+Don't forget to push to GitHub. Have fun!
+EOF
